@@ -1,0 +1,24 @@
+kind: Environment
+name: Python FastAPI Hello World
+type: primary
+components:
+    -
+        kind: Application
+        name: backend
+        gitRepo: 'https://github.com/DefCon-007/bunnyshell-environment.git'
+        gitBranch: master
+        gitApplicationPath: applications/python-fastapi
+        dockerCompose:
+            build:
+                context: ./applications/python-fastapi
+                dockerfile: Dockerfile
+            environment:
+                ALLOWED_ORIGIN: '*'
+                DEBUG: 'True'
+            ports:
+                - '8080:8000'
+        hosts:
+            -
+                hostname: 'backend-{{ env.base_domain }}'
+                path: /
+                servicePort: 8080
