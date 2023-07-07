@@ -1,0 +1,26 @@
+services:
+  api:
+    build:
+      context: ./
+    environment:
+      PORT: 8000
+      DATABASE_URL: postgresql://postgres:need-to-replace@db:5432/fastapi_test
+    ports:
+      - '8002:8000'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: "no"
+  db:
+    image: postgres:15.2-alpine3.17
+    restart: always
+    user: postgres
+    volumes:
+        - db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=fastapi_test
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=need-to-replace
+    expose:
+      - 5432
+volumes:
+  db-data:

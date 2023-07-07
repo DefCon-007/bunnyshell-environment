@@ -1,4 +1,9 @@
 import uvicorn
+from db import create_db_and_tables
+import os
 
 if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
+    create_db_and_tables()
+    port = int(os.environ.get('PORT', 8000))
+
+    uvicorn.run("app:app", host="0.0.0.0", port=port, reload=True)
