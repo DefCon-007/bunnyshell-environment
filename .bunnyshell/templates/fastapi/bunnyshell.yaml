@@ -13,8 +13,8 @@ components:
                 context: ./applications/python-fastapi
                 dockerfile: Dockerfile
             environment:
-                ALLOWED_ORIGIN: '*'
-                DEBUG: 'True'
+                PORT: 8000
+                DATABASE_URL: postgresql://postgres:need-to-replace@db:5432/fastapi_test
             ports:
                 - '8080:8000'
         hosts:
@@ -22,3 +22,24 @@ components:
                 hostname: 'backend-{{ env.base_domain }}'
                 path: /
                 servicePort: 8080
+    -
+        kind: Database
+        name: db
+        dockerCompose:
+            environment:
+                POSTGRES_DB: fastapi_test
+                POSTGRES_PASSWORD: need-to-replace
+                POSTGRES_USER: postgres
+            image: postgres:15.2-alpine3.17
+            ports:
+                - '5432:5432'
+        volumes:
+            -
+                name: data-volume
+                mount: /var/lib/postgresql/data
+                subPath: ''
+volumes:
+    -
+        name: data-volume
+        size: 1Gi
+        type: disk
