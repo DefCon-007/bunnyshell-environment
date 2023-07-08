@@ -48,8 +48,8 @@ components:
       ports:
         - '8080:3000'
     hosts:
-      - hostname: 'app-{{ env.base_domain }}'
-        path: /
+      - hostname: 'frontend-{{ env.base_domain }}'
+        path: /todo
         servicePort: 8080
 volumes:
   - name: data-volume
