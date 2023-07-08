@@ -12,7 +12,7 @@ function todo() {
     [refresh, setRefresh] = useState(false);
 
   useEffect(() => {
-    fetch(`${baseUrl}/api/v1/get-all-todos`)
+    fetch(`${baseUrl}api/v1/get-all-todos`)
       .then((response) => {
         console.log({
           url: baseUrl,
@@ -25,7 +25,7 @@ function todo() {
 
   const addTodo = () => {
     console.log("Adding todo ");
-    fetch(`${baseUrl}/api/v1/add-todo`, {
+    fetch(`${baseUrl}api/v1/add-todo`, {
       method: "POST",
       body: JSON.stringify({ todo: inputValue }),
       headers: {
@@ -39,7 +39,7 @@ function todo() {
 
   const deleteTodo = (id) => {
     console.log("Deleting todo ");
-    fetch(`${baseUrl}/api/v1/delete-todo/${id}`, {
+    fetch(`${baseUrl}api/v1/delete-todo/${id}`, {
       method: "DELETE",
     }).then(() => {
       setRefresh(!refresh);
