@@ -13,7 +13,7 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-/** 
+/**
   All of the routes for the Material Kit 2 PRO React React are added here,
   You can add a new route, customize the routes and delete the routes here.
 
@@ -40,52 +40,32 @@ Coded by www.creative-tim.com
 import Icon from "@mui/material/Icon";
 
 // Pages
-import CoworkingPage from "layouts/pages/landing-pages/coworking";
-import Rental from "layouts/pages/landing-pages/rental";
+import DesktopApp from "layouts/pages/apps/desktop-app";
+import Author from "layouts/pages/blogs/author";
+import SingleArticle from "layouts/pages/blogs/single-article";
 import AboutUs from "layouts/pages/company/about-us";
 import Pricing from "layouts/pages/company/pricing";
-import HelpCenter from "layouts/pages/support/help-center";
+import VirtualRealityPage from "layouts/pages/extra/virtual-reality";
+import CoworkingPage from "layouts/pages/landing-pages/coworking";
+import Rental from "layouts/pages/landing-pages/rental";
 import ContactUs from "layouts/pages/support/contact-us";
 import Faq from "layouts/pages/support/faq";
+import HelpCenter from "layouts/pages/support/help-center";
 import Privacy from "layouts/pages/support/privacy";
-import DesktopApp from "layouts/pages/apps/desktop-app";
-import SingleArticle from "layouts/pages/blogs/single-article";
-import Author from "layouts/pages/blogs/author";
-import VirtualRealityPage from "layouts/pages/extra/virtual-reality";
 
 // Account
+import ResetPasswordPage from "layouts/authentication/reset-password/cover";
 import SignInBasicPage from "layouts/authentication/sign-in/basic";
 import SignInCoverPage from "layouts/authentication/sign-in/cover";
 import SignInIllustration from "layouts/authentication/sign-in/illustration";
 import SignInSimplePage from "layouts/authentication/sign-in/simple";
 import SignUpCoverPage from "layouts/authentication/sign-up/cover";
-import ResetPasswordPage from "layouts/authentication/reset-password/cover";
 
 // Sections
-import PageHeaders from "layouts/sections/page-sections/page-headers";
-import Features from "layouts/sections/page-sections/featuers";
-import PricingSection from "layouts/sections/page-sections/pricing";
-import FaqSection from "layouts/sections/page-sections/faq";
-import BlogPosts from "layouts/sections/page-sections/blog-posts";
-import Testimonials from "layouts/sections/page-sections/testimonials";
-import Teams from "layouts/sections/page-sections/teams";
-import Stats from "layouts/sections/page-sections/stats";
-import Cta from "layouts/sections/page-sections/cta";
-import Applications from "layouts/sections/page-sections/applications";
-import LogoAreas from "layouts/sections/page-sections/logo-areas";
-import Footers from "layouts/sections/page-sections/footers";
-import GeneralCards from "layouts/sections/page-sections/general-cards";
-import ContentSections from "layouts/sections/page-sections/content-sections";
-import Navbars from "layouts/sections/navigation/navbars";
-import NavTabs from "layouts/sections/navigation/nav-tabs";
-import Pagination from "layouts/sections/navigation/pagination";
-import Newsletters from "layouts/sections/input-areas/newsletters";
-import ContactSections from "layouts/sections/input-areas/contact-sections";
-import Inputs from "layouts/sections/input-areas/inputs";
-import Forms from "layouts/sections/input-areas/forms";
+import Todo from "layouts/pages/todo";
 import Alerts from "layouts/sections/attention-catchers/alerts";
-import Notifications from "layouts/sections/attention-catchers/notifications";
 import Modals from "layouts/sections/attention-catchers/modals";
+import Notifications from "layouts/sections/attention-catchers/notifications";
 import TooltipsPopovers from "layouts/sections/attention-catchers/tooltips-popovers";
 import Avatars from "layouts/sections/elements/avatars";
 import Badges from "layouts/sections/elements/badges";
@@ -97,8 +77,41 @@ import SocialButtons from "layouts/sections/elements/social-buttons";
 import Tables from "layouts/sections/elements/tables";
 import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography";
+import ContactSections from "layouts/sections/input-areas/contact-sections";
+import Forms from "layouts/sections/input-areas/forms";
+import Inputs from "layouts/sections/input-areas/inputs";
+import Newsletters from "layouts/sections/input-areas/newsletters";
+import NavTabs from "layouts/sections/navigation/nav-tabs";
+import Navbars from "layouts/sections/navigation/navbars";
+import Pagination from "layouts/sections/navigation/pagination";
+import Applications from "layouts/sections/page-sections/applications";
+import BlogPosts from "layouts/sections/page-sections/blog-posts";
+import ContentSections from "layouts/sections/page-sections/content-sections";
+import Cta from "layouts/sections/page-sections/cta";
+import FaqSection from "layouts/sections/page-sections/faq";
+import Features from "layouts/sections/page-sections/featuers";
+import Footers from "layouts/sections/page-sections/footers";
+import GeneralCards from "layouts/sections/page-sections/general-cards";
+import LogoAreas from "layouts/sections/page-sections/logo-areas";
+import PageHeaders from "layouts/sections/page-sections/page-headers";
+import PricingSection from "layouts/sections/page-sections/pricing";
+import Stats from "layouts/sections/page-sections/stats";
+import Teams from "layouts/sections/page-sections/teams";
+import Testimonials from "layouts/sections/page-sections/testimonials";
 
 const routes = [
+  {
+    name: "dashboard",
+    icon: <Icon>Todo</Icon>,
+    route: "/todo",
+    collapse: [
+      {
+        name: "todo",
+        route: "/todo",
+        component: <Todo />,
+      },
+    ],
+  },
   {
     name: "pages",
     icon: <Icon>dashboard</Icon>,
