@@ -3,7 +3,7 @@ FROM node:14-alpine
 
 WORKDIR /app/
 
-COPY ./package*.json /app/
+COPY ./package.json /app/
 
 # Install dependencies
 RUN npm install
@@ -14,4 +14,4 @@ VOLUME [ "/app/node_modules" ]
 # Copy the build directory to the container
 COPY . /app/
 
-CMD [ "npm", "run", "start"]
+ENTRYPOINT [ "npm", "run", "start"]
