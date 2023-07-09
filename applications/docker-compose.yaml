@@ -30,7 +30,7 @@ services:
       context: ./react-frontend
     environment:
       HOST: 0.0.0.0
-      REACT_APP_BACKEND_URL: http://0.0.0.0:8002
+      REACT_APP_BACKEND_URL: http://0.0.0.0:8002/
     ports:
       - '8003:3000'
     volumes:
