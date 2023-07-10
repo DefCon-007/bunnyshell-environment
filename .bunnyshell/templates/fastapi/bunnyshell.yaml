@@ -1,5 +1,5 @@
 kind: Environment
-name: Python FastAPI Hello World
+name: Python (FastAPI) / React (CreativeTim Material Kit Pro react template) / PostgreSQL boilerplate
 type: primary
 components:
   - kind: Application

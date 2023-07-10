@@ -32,7 +32,7 @@ services:
       HOST: 0.0.0.0
       REACT_APP_BACKEND_URL: http://0.0.0.0:8002/
     ports:
-      - '8003:3000'
+      - '8080:3000'
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./react-frontend:/app
