@@ -1,25 +1,23 @@
-# Bunnyshell Environment
+## Bunnyshell Environment Template for Python FastAPI + React + PostgreSQL
 
-This is a template bunnyshell environment for Python FastAPI + React + PostgreSQL.
-
-It is a basic CRUD application that allows you to create, read, and delete todo with simple yet beautiful UI using CreativeTim's Material 2 pro react template.
+This repository provides a template environment for developing a CRUD (Create, Read, Update, Delete) application using Python FastAPI, React, and PostgreSQL.
+The application also features a visually appealing user interface based on CreativeTim's Material 2 Pro React template.
 
 ## Local Usage
 
-To use this environment locally, follow these steps:
+To set up and use this environment locally, please follow the steps below:
 
-1. Ensure docker and docker compose present in the system.
-2. Go to applications director. `cd applications`
-3. Build the docker images. `docker-compose build`
-4. Run the docker images. `docker-compose up`
-5. Now you can access the application at `http://0.0.0.0:8080/todo`
+1. Make sure that Docker and Docker Compose are installed on your system. If not, please install them first.
+2. Navigate to the "applications" directory using the command cd applications.
+3. Build the Docker images by running the command docker-compose build.
+4. Launch the Docker containers by executing the command docker-compose up.
+   You can now access the application by visiting http://0.0.0.0:8080/todo in your web browser.
+   Contributing
+   If you wish to contribute to this environment, please follow the steps outlined below:
 
-## Contributing
-
-To contribute to this environment, follow these steps:
-
-1. Fork this repository.
-2. Create a new branch.
-3. Make your changes and commit them.
-4. Push your changes to your fork.
-5. Submit a pull request.
+Fork this repository to your own GitHub account.
+Create a new branch on your forked repository.
+Implement your changes and commit them to your branch.
+Push your changes to your forked repository.
+Finally, submit a pull request from your branch to the original repository.
+Thank you for considering contributing to this project. Your contributions are highly appreciated!
