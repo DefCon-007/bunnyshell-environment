@@ -32,7 +32,7 @@ function Todo() {
     todoElements = <MKTypography variant="h3">No todos found</MKTypography>;
   } else {
     const allTodos = todos.map((todo, index) => (
-      <Stack direction="row" spacing={1} mt={3} key={index}>
+      <Stack direction="row" spacing={1} mt={3} key={index} justifyContent="space-between">
         <MKTypography variant="h4">{todo.todo}</MKTypography>
         <MKButton onClick={() => deleteTodoById(todo.id, () => setRefresh(!refresh))}>
           Clear
@@ -59,111 +59,6 @@ function Todo() {
         }}
         sticky
       />
-      {/* <MKBox component="nav" position="absolute" top="0.5rem" width="100%">
-        <Container>
-          <Grid container flexDirection="row" alignItems="center">
-            <MKTypography
-              component={Link}
-              href="/"
-              variant="button"
-              fontWeight="regular"
-              py={0.8125}
-              mr={2}
-            >
-              Material Design
-            </MKTypography>
-            <MKButton variant="outlined" sx={{ display: { xs: "block", lg: "none" }, ml: "auto" }}>
-              <MKBox component="i" className="fas fa-bars" />
-            </MKButton>
-            <MKBox
-              component="ul"
-              display={{ xs: "none", lg: "flex" }}
-              p={0}
-              my={0}
-              mx="auto"
-              sx={{ listStyle: "none" }}
-            >
-              <MKBox component="li">
-                <MKTypography
-                  component={Link}
-                  href="#"
-                  variant="button"
-                  fontWeight="regular"
-                  p={1}
-                  onClick={(e) => e.preventDefault()}
-                >
-                  Home
-                </MKTypography>
-              </MKBox>
-              <MKBox component="li">
-                <MKTypography
-                  component={Link}
-                  href="#"
-                  variant="button"
-                  fontWeight="regular"
-                  p={1}
-                  onClick={(e) => e.preventDefault()}
-                >
-                  About Us
-                </MKTypography>
-              </MKBox>
-              <MKBox component="li">
-                <MKTypography
-                  component={Link}
-                  href="#"
-                  variant="button"
-                  fontWeight="regular"
-                  p={1}
-                  onClick={(e) => e.preventDefault()}
-                >
-                  Contact Us
-                </MKTypography>
-              </MKBox>
-            </MKBox>
-            <MKBox
-              component="ul"
-              display={{ xs: "none", lg: "flex" }}
-              p={0}
-              m={0}
-              sx={{ listStyle: "none" }}
-            >
-              <MKBox component="li">
-                <MKTypography
-                  component={Link}
-                  href="#"
-                  variant="button"
-                  p={1}
-                  onClick={(e) => e.preventDefault()}
-                >
-                  <MKBox component="i" className="fab fa-twitter" />
-                </MKTypography>
-              </MKBox>
-              <MKBox component="li">
-                <MKTypography
-                  component={Link}
-                  href="#"
-                  variant="button"
-                  p={1}
-                  onClick={(e) => e.preventDefault()}
-                >
-                  <MKBox component="i" className="fab fa-facebook" />
-                </MKTypography>
-              </MKBox>
-              <MKBox component="li">
-                <MKTypography
-                  component={Link}
-                  href="#"
-                  variant="button"
-                  p={1}
-                  onClick={(e) => e.preventDefault()}
-                >
-                  <MKBox component="i" className="fab fa-instagram" />
-                </MKTypography>
-              </MKBox>
-            </MKBox>
-          </Grid>
-        </Container>
-      </MKBox> */}
       <MKBox
         display="flex"
         alignItems="center"
